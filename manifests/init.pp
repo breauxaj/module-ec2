@@ -27,7 +27,7 @@
 class aws (
   $ensure = 'latest'
 ) inherits ::aws::params {
-  package { $::aws::params::aws_package:
+  package { $::aws::params::aws_packages:
     ensure  => $ensure,
   }
 
