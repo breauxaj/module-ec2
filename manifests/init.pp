@@ -1,6 +1,6 @@
-# Class: aws
+# Class: ec2
 #
-# This class installs aws packages
+# This class installs ec2 packages
 #
 # Parameters:
 #
@@ -14,20 +14,20 @@
 #
 #  For a standard installation, use:
 #
-#    class { 'aws':
+#    class { 'ec2':
 #      ensure => 'latest'
 #    }
 #
 #  To remove the installation, use:
 #
-#    class { 'aws':
+#    class { 'ec2':
 #      ensure => 'absent'
 #    }
 #
-class aws (
+class ec2 (
   $ensure = 'latest'
-) inherits ::aws::params {
-  package { $::aws::params::aws_packages:
+) inherits ::ec2::params {
+  package { $::ec2::params::ec2_packages:
     ensure  => $ensure,
   }
 

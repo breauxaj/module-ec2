@@ -1,4 +1,4 @@
-aws
+ec2
 ===
 
 
@@ -6,10 +6,10 @@ aws
 Samples
 -------
 ```
-include aws
+include ec2
 ```
 ```
-class { 'aws':
+class { 'ec2':
   ensure => 'latest'
 }
 ```

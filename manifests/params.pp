@@ -1,4 +1,4 @@
-# Class: aws::params
+# Class: ec2::params
 #
 # This class sets parameters used in this module
 #
@@ -6,10 +6,10 @@
 #   - Defines numerous parameters used by other classes
 #   - Does not support other operatingsystem patterns - amazon only
 #
-class aws::params {
+class ec2::params {
   case $::operatingsystem {
     'amazon': {
-      $aws_packages = [
+      $ec2_packages = [
         'aws-amitools-ec2',
         'aws-apitools-as',
         'aws-apitools-common',
