@@ -4,11 +4,11 @@
 #
 # Actions:
 #   - Defines numerous parameters used by other classes
-#   - Does not support other operatingsystem patterns - amazon only
+#   - Does not support other operatingsystem patterns - Amazon only
 #
 class ec2::params {
   case $::operatingsystem {
-    'amazon': {
+    'Amazon': {
       $ec2_packages = [
         'aws-amitools-ec2',
         'aws-apitools-as',
@@ -24,7 +24,7 @@ class ec2::params {
 
     }
     default: {
-      fail("Unsupported platform: ${::operatingsystem}")
+      fail("The ${module_name} module is not supported on an ${::operatingsystem} distribution.")
     }
   }
 
