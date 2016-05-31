@@ -21,7 +21,6 @@ class ec2::params {
         'ec2-net-utils',
         'ec2-utils'
       ]
-
     }
     default: {
       fail("The ${module_name} module is not supported on an ${::operatingsystem} distribution.")
