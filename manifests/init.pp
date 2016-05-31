@@ -25,7 +25,7 @@
 #    }
 #
 class ec2 (
-  $ensure = 'latest'
+  $ensure = $::ec2::params::ec2_package_ensure
 ) inherits ::ec2::params {
   package { $::ec2::params::ec2_packages:
     ensure  => $ensure,

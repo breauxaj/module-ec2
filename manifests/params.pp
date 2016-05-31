@@ -7,6 +7,8 @@
 #   - Does not support other operatingsystem patterns - Amazon only
 #
 class ec2::params {
+  $ec2_package_ensure = 'latest'
+
   case $::operatingsystem {
     'Amazon': {
       $ec2_packages = [
